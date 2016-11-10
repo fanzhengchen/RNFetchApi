@@ -8,10 +8,17 @@ import {
     View
 } from 'react-native';
 
+import {fetchHomePage} from './ApiProvider';
+
 export default class Main extends Component {
+
+    componentWillMount() {
+        fetchHomePage();
+    }
+
     render() {
         return (
-            <Text>asfdaf</Text>
+            <Text>fetch</Text>
         );
     }
 }
